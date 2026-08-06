@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMI | Doctor Dashboard</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+<div class="sidebar-logo">
+
+    <img src="{{ url_for('static', filename='images/logo.png') }}">
+
+    <div>
+
+        <!-- <h2>UMI</h2> -->
+
+        <p >Hospital ERP</p>
+
+    </div>
+
+</div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="#" class="active">Dashboard</a>
+        <a href="{{ url_for('prescription') }}" class="primary-btn">Prescription Templates</a>
+
+            <a href="{{ url_for('doctor_schedule') }}" class="primary-btn">Schedule</a>
+           <a href="{{ url_for('help_page') }}" class="primary-btn">Help</a>
+
+            <a href="{{ url_for('logout_page') }}" class="danger-btn">Logout</a>
+        </nav>
+
+    </aside>
+
+    <div class="main-container">
+
+        <header class="top-navbar">
+
+            <h1>Doctor Dashboard</h1>
+
+            
+
+            <div class="navbar-right">
+
+                <input type="date">
+
+                <div class="profile-info">
+                    <!-- <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Doctor"> -->
+                    <span>Dr. Rahul Patil</span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="toolbar">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search by Mobile, UHID or Patient Name">
+
+                    <button>Search</button>
+
+                </div>
+
+            </section>
+
+            <section class="tab-section">
+
+                <button class="tab-btn active">
+                    Pending (5)
+                </button>
+
+                <button class="tab-btn">
+                    Prescribed (8)
+                </button>
+
+            </section>
+
+            <section class="table-section">
+
+                <table class="appointment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>UHID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Mobile</th>
+                            <th>Time</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Dummy Data (Replace with Database Later) -->
+
+                        <tr>
+
+                            <td>UHID260804001</td>
+                            <td>Rahul Sharma</td>
+                            <td>35</td>
+                            <td>Male</td>
+                            <td>9876543210</td>
+                            <td>10:00 AM</td>
+
+                            <td>
+                                <button onclick="window.location.href='/prescription'" class="primary-btn">
+                                    Start Prescription
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>UHID260804002</td>
+                            <td>Sneha Patil</td>
+                            <td>28</td>
+                            <td>Female</td>
+                            <td>9876543201</td>
+                            <td>10:20 AM</td>
+
+                            <td>
+                                <button onclick="window.location.href='/prescription'" class="primary-btn">
+                                    Start Prescription
+                                </button>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>UHID260804003</td>
+                            <td>Amit Deshmukh</td>
+                            <td>44</td>
+                            <td>Male</td>
+                            <td>9876543255</td>
+                            <td>10:40 AM</td>
+
+                            <td>
+                                <button onclick="window.location.href='/prescription'" class="primary-btn">
+                                    Start Prescription
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section> 
+
+ 
+      <section class="summary-section">
+
+                <div class="summary-card">
+
+                    <h3>Total Pending</h3>
+
+                    <h2>18</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Total Prescribed</h3>
+
+                    <h2>12</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Appointments Today</h3>
+
+                    <h2>30</h2>
+
+                </div>
+
+            </section>
+                </div>
+
+</div>     
+</main>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

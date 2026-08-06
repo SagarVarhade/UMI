@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UMI | Manage Users</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<body>
+
+<div class="page-container">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <div class="page-title">
+
+            <h1>Manage Users</h1>
+
+            <p>Create, Edit and Manage System Users</p>
+
+        </div>
+
+        <div class="page-actions">
+
+            <button class="primary-btn">
+s
+                + Add User
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="table-container">
+
+        <!-- Filters -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search Name, Mobile or Email">
+
+            </div>
+
+            <div class="filter-box">
+
+                <label>Role</label>
+
+                <select>
+
+                    <option>All</option>
+                    <option>Doctor</option>
+                    <option>Nurse</option>
+                    <option>Pharmacist</option>
+                    <option>Receptionist</option>
+                    <option>Admin</option>
+
+                </select>
+
+            </div>
+
+            <div class="filter-box">
+
+                <label>Status</label>
+
+                <select>
+
+                    <option>All</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+        <!-- User Table -->
+
+        <section class="table-section">
+
+            <table class="appointment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- Dummy Data -->
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Dr. Rahul Patil</td>
+
+                        <td>Doctor</td>
+
+                        <td>9876543210</td>
+
+                        <td>drpatil@gmail.com</td>
+
+                        <td>Active</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                Edit
+
+                            </button>
+
+                            <button class="danger-btn">
+
+                                Delete
+
+                            </button>
+
+                            <button class="secondary-btn">
+
+                                Reset Password
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Priya Sharma</td>
+
+                        <td>Nurse</td>
+
+                        <td>9988776655</td>
+
+                        <td>priya@gmail.com</td>
+
+                        <td>Active</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                Edit
+
+                            </button>
+
+                            <button class="danger-btn">
+
+                                Delete
+
+                            </button>
+
+                            <button class="secondary-btn">
+
+                                Reset Password
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>Ravi Kumar</td>
+
+                        <td>Pharmacist</td>
+
+                        <td>9871234567</td>
+
+                        <td>ravi@gmail.com</td>
+
+                        <td>Inactive</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                Edit
+
+                            </button>
+
+                            <button class="danger-btn">
+
+                                Delete
+
+                            </button>
+
+                            <button class="secondary-btn">
+
+                                Reset Password
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+                <!-- Add / Edit User -->
+
+        <section class="form-section">
+
+            <h2>Add / Edit User</h2>
+
+            <form>
+
+                <!-- Row 1 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>First Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter First Name">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Last Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter Last Name">
+
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Gender</label>
+
+                        <select>
+
+                            <option>Select Gender</option>
+
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Date of Birth</label>
+
+                        <input type="date">
+
+                    </div>
+
+                </div>
+
+                <!-- Row 3 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Mobile Number</label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter Mobile Number">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            placeholder="Enter Email">
+
+                    </div>
+
+                </div>
+
+                <!-- Row 4 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Role</label>
+
+                        <select>
+
+                            <option>Select Role</option>
+
+                            <option>Doctor</option>
+                            <option>Nurse</option>
+                            <option>Pharmacist</option>
+                            <option>Receptionist</option>
+                            <option>Admin</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select>
+
+                            <option>Active</option>
+                            <option>Inactive</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- Row 5 -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>Temporary Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Enter Temporary Password">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Confirm Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Confirm Password">
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <section class="form-actions">
+
+                    <button
+                        type="reset"
+                        class="secondary-btn">
+
+                        Cancel
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+
+                        Save User
+
+                    </button>
+
+                </section>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+
+</body>
+
+</html>

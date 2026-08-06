@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UMI | Reports</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <div class="page-title">
+
+            <h1>Reports</h1>
+
+            <p>Generate Hospital Reports</p>
+
+        </div>
+
+    </header>
+
+    <main class="table-container">
+
+        <!-- Filters -->
+
+        <section class="form-section">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>From Date</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>To Date</label>
+
+                    <input type="date">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Report Type</label>
+
+                    <select>
+
+                        <option>Select Report</option>
+
+                        <option>Daily Patients</option>
+
+                        <option>Appointments</option>
+
+                        <option>Doctor-wise Appointments</option>
+
+                        <option>Doctor-wise Prescriptions</option>
+
+                        <option>Pharmacy Sales</option>
+
+                        <option>Medicine Inventory</option>
+
+                        <option>Low Stock Medicines</option>
+
+                        <option>User Activity</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>&nbsp;</label>
+
+                    <button class="primary-btn">
+
+                        Generate Report
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Report Table -->
+
+        <section class="table-section">
+
+            <table class="appointment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Patient</th>
+
+                        <th>Doctor</th>
+
+                        <th>Department</th>
+
+                        <th>Amount</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- Dummy Data -->
+
+                    <tr>
+
+                        <td>04-08-2026</td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>Dr. Patil</td>
+
+                        <td>General Medicine</td>
+
+                        <td>₹450</td>
+
+                        <td>Completed</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>04-08-2026</td>
+
+                        <td>Sneha Patil</td>
+
+                        <td>Dr. Kulkarni</td>
+
+                        <td>General Medicine</td>
+
+                        <td>₹320</td>
+
+                        <td>Completed</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>04-08-2026</td>
+
+                        <td>Amit Deshmukh</td>
+
+                        <td>Dr. Patil</td>
+
+                        <td>General Medicine</td>
+
+                        <td>₹600</td>
+
+                        <td>Pending</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+                <!-- Report Summary -->
+
+        <section class="summary-cards">
+
+            <div class="summary-card">
+
+                <h3>Total Records</h3>
+
+                <h1>125</h1>
+
+                <p>Matching Results</p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Total Revenue</h3>
+
+                <h1>₹48,560</h1>
+
+                <p>For Selected Period</p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Completed</h3>
+
+                <h1>118</h1>
+
+                <p>Successful Records</p>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h3>Pending</h3>
+
+                <h1>7</h1>
+
+                <p>Pending Records</p>
+
+            </div>
+
+        </section>
+
+        <!-- Export Actions -->
+
+        <section class="form-actions">
+
+            <button
+                type="button"
+                class="secondary-btn">
+
+                Print
+
+            </button>
+
+            <button
+                type="button"
+                class="secondary-btn">
+
+                Export PDF
+
+            </button>
+
+            <button
+                type="button"
+                class="primary-btn">
+
+                Export Excel
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="dashboard-footer">
+
+        <p>
+
+            © UMI Hospital Management System
+
+        </p>
+
+    </footer>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+
+</body>
+
+</html>

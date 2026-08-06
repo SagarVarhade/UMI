@@ -1,0 +1,286 @@
+/*=========================================
+            UMI BUTTONS
+=========================================*/
+
+/*========== Common Button ==========*/
+
+button,
+.primary-btn,
+.secondary-btn,
+.danger-btn,
+.table-btn,
+.filter-btn,
+.search-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-height:46px;
+    padding:12px 22px;
+
+    border:none;
+    border-radius:12px;
+
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:all .30s ease;
+
+    white-space:nowrap;
+
+}
+
+/*========== Primary Button ==========*/
+
+.primary-btn{
+
+    background:linear-gradient(135deg,#3B82F6,#2563EB);
+
+    color:#FFFFFF;
+
+    box-shadow:0 10px 20px rgba(37,99,235,.18);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 30px rgba(37,99,235,.28);
+
+}
+
+.primary-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*========== Secondary Button ==========*/
+
+.secondary-btn{
+
+    background:#FFFFFF;
+
+    color:#2563EB;
+
+    border:1px solid #BFDBFE;
+
+}
+
+.secondary-btn:hover{
+
+    background:#EFF6FF;
+
+    border-color:#60A5FA;
+
+}
+
+/*========== Danger Button ==========*/
+
+.danger-btn{
+
+    background:#DC2626;
+
+    color:#FFFFFF;
+
+    box-shadow:0 10px 20px rgba(220,38,38,.18);
+
+}
+
+.danger-btn:hover{
+
+    background:#B91C1C;
+
+    transform:translateY(-2px);
+
+}
+
+/*========== Table Button ==========*/
+
+.table-btn{
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    border:1px solid #BFDBFE;
+
+}
+
+.table-btn:hover{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+/*========== Filter Button ==========*/
+
+.filter-btn{
+
+    background:#1D4ED8;
+
+    color:#FFFFFF;
+
+}
+
+.filter-btn:hover{
+
+    background:#1E40AF;
+
+}
+
+/*========== Search Button ==========*/
+
+.search-btn{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    border-radius:0 12px 12px 0;
+
+    min-width:95px;
+
+    padding:0 22px;
+
+}
+
+.search-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+/*========== Icon Buttons ==========*/
+
+.notification-btn,
+.toggle-password,
+.close-btn{
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    color:#2563EB;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:all .30s ease;
+
+}
+
+.notification-btn:hover,
+.toggle-password:hover,
+.close-btn:hover{
+
+    background:#EFF6FF;
+
+    border-color:#93C5FD;
+
+    transform:translateY(-2px);
+
+}
+
+/*========== Disabled ==========*/
+
+button:disabled,
+.primary-btn:disabled,
+.secondary-btn:disabled,
+.danger-btn:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/*========== Full Width ==========*/
+
+.btn-block{
+
+    width:100%;
+
+}
+
+/*========== Small Button ==========*/
+
+.btn-sm{
+
+    min-height:38px;
+
+    padding:8px 16px;
+
+    font-size:13px;
+
+}
+
+/*========== Large Button ==========*/
+
+.btn-lg{
+
+    min-height:54px;
+
+    padding:14px 30px;
+
+    font-size:16px;
+
+}
+
+/*========== Button Groups ==========*/
+
+.form-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.toolbar-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.page-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}

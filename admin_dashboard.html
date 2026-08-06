@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title> UMI | Admin Dashboard</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <!-- <img src="{{ url_for('static', filename='images/logo.png') }}" -->
+                 <!-- alt="UMI"> -->
+
+            <div class="sidebar-logo">
+
+    <!-- <img src="{{ url_for('static', filename='images/logo.png') }}"> -->
+
+    <div>
+
+        <h2>UMI</h2>
+
+        <p>Hospital ERP</p>
+
+    </div>
+
+</div>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="admin_dashboard" class="active">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('manage_users') }}" class="primary-btn">
+                Manage Users
+            </a>
+
+            <a href="{{ url_for('medicine_inventory') }}" class="primary-btn">
+                Manage Medicines
+            </a>
+
+            <a href="{{ url_for('reports') }}" class="primary-btn">
+                Reports
+            </a>
+                       <a href="{{ url_for('help_page') }}" class="primary-btn">Help</a>
+
+
+            <!-- <a href="#">
+                Settings
+            </a>
+        -->
+                        <a href="{{ url_for('logout_page') }}" class="danger-btn">Logout</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <div class="main-container">
+
+        <!-- Top Navbar -->
+
+        <header class="top-navbar">
+
+            <div class="page-title">
+
+                <h1>Admin Dashboard</h1>
+
+            </div>
+
+            <div class="navbar-right">
+
+                <span class="current-date">
+
+                    04 Aug 2026
+
+                </span>
+
+                <button class="notification-btn">
+
+                    🔔
+
+                </button>
+
+                <div class="profile-info">
+
+                    <!-- <img src="{{ url_for('static', filename='images/profile.png') }}" -->
+                         <!-- alt="Admin"> -->
+
+                    <span>Administrator</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Content -->
+
+        <main class="dashboard-content">
+
+            <!-- Summary Cards -->
+
+            <section class="summary-cards">
+
+                <div class="summary-card">
+
+                    <h3>Today's Patients</h3>
+
+                    <h1>30</h1>
+
+                    <p>Registered Today</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Appointments</h3>
+
+                    <h1>45</h1>
+
+                    <p>Scheduled Today</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Doctors Available</h3>
+
+                    <h1>8</h1>
+
+                    <p>Currently Available</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <h3>Low Stock</h3>
+
+                    <h1>12</h1>
+
+                    <p>Medicines Need Refill</p>
+
+                </div>
+
+            </section>
+
+            <!-- Quick Actions -->
+
+            <section class="quick-actions">
+
+                <h2>Quick Actions</h2>
+
+                <div class="action-grid">
+
+                    <div class="action-card">
+
+                        <h3>Add User</h3>
+
+                        <p>Create Doctor, Nurse, Pharmacist or Admin</p>
+
+                    </div>
+
+                    <div class="action-card">
+
+                        <h3>Manage Users</h3>
+
+                        <p>View and Edit Staff Accounts</p>
+
+                    </div>
+
+                    <div class="action-card">
+
+                        <h3>Manage Medicines</h3>
+
+                        <p>Inventory & Stock Management</p>
+
+                    </div>
+
+                    <div class="action-card">
+
+                        <h3>Reports</h3>
+
+                        <p>Daily and Monthly Reports</p>
+
+                    </div>
+
+                    <div class="action-card">
+
+                        <h3>Backup Database</h3>
+
+                        <p>Create System Backup</p>
+
+                    </div>
+
+                    <div class="action-card">
+
+                        <h3>Settings</h3>
+
+                        <p>Hospital Configuration</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+                        <!-- Recent Activities -->
+
+            <section class="table-section">
+
+                <h2>Recent Activities</h2>
+
+                <table class="appointment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Time</th>
+                            <th>User</th>
+                            <th>Activity</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Dummy Data (Replace Later) -->
+
+                        <tr>
+
+                            <td>10:10 AM</td>
+                            <td>Rahul Sharma</td>
+                            <td>Patient Registered</td>
+                            <td>Completed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>10:30 AM</td>
+                            <td>Dr. Patil</td>
+                            <td>Prescription Created</td>
+                            <td>Completed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>10:45 AM</td>
+                            <td>Pharmacy</td>
+                            <td>Medicine Dispensed</td>
+                            <td>Completed</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>11:00 AM</td>
+                            <td>Administrator</td>
+                            <td>New User Added</td>
+                            <td>Completed</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- Lower Dashboard -->
+
+            <section class="dashboard-grid">
+
+                <!-- Low Stock Medicines -->
+
+                <div class="dashboard-card">
+
+                    <h2>Low Stock Medicines</h2>
+
+                    <table class="appointment-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Medicine</th>
+                                <th>Batch</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <!-- Dummy Data -->
+
+                            <tr>
+
+                                <td>Paracetamol 650</td>
+                                <td>A001</td>
+                                <td>8</td>
+                                <td>Low Stock</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Vitamin C</td>
+                                <td>C205</td>
+                                <td>2</td>
+                                <td>Low Stock</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>Azithromycin</td>
+                                <td>B112</td>
+                                <td>0</td>
+                                <td>Out of Stock</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <!-- Analytics -->
+
+                <div class="dashboard-card">
+
+                    <h2>Daily Appointments</h2>
+
+                    <div class="chart-placeholder">
+
+                        Chart Placeholder
+
+                    </div>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <h2>Monthly Patients</h2>
+
+                    <div class="chart-placeholder">
+
+                        Chart Placeholder
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+
+                © UMI Hospital Management System
+
+            </p>
+
+        </footer>
+
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+
+</html>

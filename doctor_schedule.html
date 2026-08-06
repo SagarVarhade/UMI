@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UMI | Doctor Schedule</title>
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <!-- Header -->
+
+    <header class="page-header">
+
+        <div class="page-title">
+
+            <h1>Doctor Schedule</h1>
+
+            <p>Manage Weekly Schedule</p>
+
+        </div>
+
+        <div class="page-actions">
+
+<button class="secondary-btn" onclick="history.back()">
+    ← Back
+</button>
+        </div>
+
+    </header>
+
+    <main class="form-container">
+
+        <!-- Doctor Details -->
+
+        <section class="form-section">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Doctor Name</label>
+
+                    <input
+                        type="text"
+                        value="Dr. Rahul Patil"
+                        readonly>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Appointment Duration</label>
+
+                    <select>
+
+                        <option>10 Minutes</option>
+                        <option selected>15 Minutes</option>
+                        <option>20 Minutes</option>
+                        <option>30 Minutes</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Monday -->
+
+        <section class="form-section">
+
+            <h2>Monday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Tuesday -->
+
+        <section class="form-section">
+
+            <h2>Tuesday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Wednesday -->
+
+        <section class="form-section">
+
+            <h2>Wednesday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Thursday -->
+
+        <section class="form-section">
+
+            <h2>Thursday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- Friday -->
+
+        <section class="form-section">
+
+            <h2>Friday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox" checked>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Saturday -->
+
+        <section class="form-section">
+
+            <h2>Saturday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Sunday -->
+
+        <section class="form-section">
+
+            <h2>Sunday</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Enable Day</label>
+
+                    <input type="checkbox">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Morning Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Morning End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Evening Start</label>
+
+                    <input type="time">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Evening End</label>
+
+                    <input type="time">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Blocked Dates -->
+
+        <section class="form-section">
+
+            <h2>Leave Dates</h2>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Select Date</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>&nbsp;</label>
+
+                    <button
+                        type="button"
+                        class="primary-btn">
+
+                        Add Date
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <table class="appointment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Leave Date</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- Dummy Data -->
+
+                    <tr>
+
+                        <td>15-08-2026</td>
+
+                        <td>
+
+                            <button
+                                type="button"
+                                class="danger-btn">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>02-10-2026</td>
+
+                        <td>
+
+                            <button
+                                type="button"
+                                class="danger-btn">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Buttons -->
+
+        <section class="form-actions">
+
+            <button
+                type="reset"
+                class="secondary-btn">
+
+                Reset
+
+            </button>
+
+            <button
+                type="submit"
+                class="primary-btn">
+
+                Save Schedule
+
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+</body>
+</html>

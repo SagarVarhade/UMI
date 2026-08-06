@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMI | Dispense Medicine</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+
+<div class="page-container">
+
+    <header class="page-header">
+
+        <div class="page-title">
+            <h1>Dispense Medicine</h1>
+            <p>Prescription Details</p>
+        </div>
+
+        <div class="page-actions">
+
+            <a href="{{ url_for('pharmacy_dashboard') }}" class="secondary-btn">
+                ← Back
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="form-container">
+
+        <!-- Patient Details -->
+
+        <!-- Patient Details -->
+
+<section class="form-section">
+
+    <h2>Patient Details</h2>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>UHID</label>
+            <input type="text" value="UHID260804001" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Patient Name</label>
+            <input type="text" value="Rahul Sharma" readonly>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" value="35" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" value="Male" readonly>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="text" value="9876543210" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Doctor</label>
+            <input type="text" value="Dr. Patil" readonly>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Prescription -->
+
+<section class="form-section">
+
+    <h2>Prescription</h2>
+
+    <table class="appointment-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Medicine</th>
+                <th>Available Stock</th>
+                <th>Qty Required</th>
+                <th>Unit Price (₹)</th>
+                <th>Total (₹)</th>
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <!-- Dummy Data (Replace with Database Later) -->
+
+            <tr>
+
+                <td>Paracetamol 650 mg</td>
+                <td>125</td>
+                <td>10</td>
+                <td>2.00</td>
+                <td>20.00</td>
+                <td>Available</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Pantoprazole 40 mg</td>
+                <td>35</td>
+                <td>5</td>
+                <td>8.00</td>
+                <td>40.00</td>
+                <td>Available</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Vitamin C</td>
+                <td>3</td>
+                <td>5</td>
+                <td>5.00</td>
+                <td>25.00</td>
+                <td>Insufficient Stock</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- Billing Summary -->
+
+<section class="form-section">
+
+    <h2>Billing Summary</h2>
+
+    <table class="summary-table">
+
+        <tr>
+            <td>Medicine Total</td>
+            <td>₹85.00</td>
+        </tr>
+
+        <tr>
+            <td>Discount</td>
+            <td>₹0.00</td>
+        </tr>
+
+        <tr>
+            <th>Grand Total</th>
+            <th>₹85.00</th>
+        </tr>
+
+    </table>
+
+</section>
+
+<!-- Pharmacy Notes -->
+
+<section class="form-section">
+
+    <h2>Pharmacy Notes</h2>
+
+    <textarea rows="4" placeholder="Optional Notes"></textarea>
+
+</section>
+
+<!-- Buttons -->
+
+<section class="form-actions">
+
+    <button class="secondary-btn">
+        Cancel
+    </button>
+
+    <button class="primary-btn">
+        Dispense & Print Bill
+    </button>
+
+</section>
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <main class="form-container">
+
+<div class="page-actions">
+
+<button class="secondary-btn" onclick="history.back()">
+    ← Back
+</button>
+        </div>
+
+<h1><center>Patient Prescription</center></h1> 
+    <section class="form-section">
+
+        <h2>Patient Information</h2>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>UHID</label>
+
+                <input type="text"
+                       value="UHID260805001"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Patient Name</label>
+
+                <input type="text"
+                       value="Rahul Sharma"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Age</label>
+
+                <input type="text"
+                       value="35"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <input type="text"
+                       value="Male"
+                       readonly>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Mobile Number</label>
+
+                <input type="text"
+                       value="9876543210"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Doctor</label>
+
+                <input type="text"
+                       value="Dr. Rahul Patil"
+                       readonly>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Date</label>
+
+                <input type="date">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Time</label>
+
+                <input type="time">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= VITALS ================= -->
+
+    <section class="form-section">
+
+        <h2>Vitals</h2>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Height (cm)</label>
+
+                <input type="number"
+                       placeholder="170">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Weight (kg)</label>
+
+                <input type="number"
+                       placeholder="65">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Blood Pressure</label>
+
+                <input type="text"
+                       placeholder="120 / 80">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Pulse</label>
+
+                <input type="number"
+                       placeholder="72">
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Temperature (°C)</label>
+
+                <input type="number"
+                       step="0.1"
+                       placeholder="98.6">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>SpO₂ (%)</label>
+
+                <input type="number"
+                       placeholder="98">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Respiratory Rate</label>
+
+                <input type="number"
+                       placeholder="18">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Blood Sugar</label>
+
+                <input type="number"
+                       placeholder="110">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= Complaint ================= -->
+
+    <section class="form-section">
+
+        <h2>Chief Complaint</h2>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Select Complaint</label>
+
+                <input
+                    list="complaints"
+                    placeholder="Type or Select Complaint">
+
+                <datalist id="complaints">
+
+                    <option value="Fever">
+
+                    <option value="Cold & Cough">
+
+                    <option value="Hypertension">
+
+                    <option value="Diabetes">
+
+                    <option value="Asthma">
+
+                    <option value="Allergy">
+
+                    <option value="Gastritis">
+
+                    <option value="Migraine">
+
+                    <option value="Headache">
+
+                    <option value="Viral Fever">
+
+                    <option value="Skin Infection">
+
+                    <option value="Back Pain">
+
+                    <option value="Joint Pain">
+
+                    <option value="UTI">
+
+                </datalist>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Symptoms</label>
+
+                <textarea
+                    rows="4"
+                    placeholder="Enter patient symptoms..."></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Diagnosis</label>
+
+                <textarea
+                    rows="4"
+                    placeholder="Enter diagnosis..."></textarea>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= Prescription Template ================= -->
+
+    <section class="form-section">
+
+        <h2>Prescription Template</h2>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Select Saved Template</label>
+
+                <select>
+
+                    <option>Select Template</option>
+
+                    <option>Common Fever</option>
+
+                    <option>Common Cold</option>
+
+                    <option>Diabetes</option>
+
+                    <option>Hypertension</option>
+
+                    <option>Asthma</option>
+
+                    <option>Gastritis</option>
+
+                    <option>Vitamin Deficiency</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>&nbsp;</label>
+
+                <button class="primary-btn" onclick="loadTemplate()">
+    Load Template
+</button>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= Medicines ================= -->
+
+<section class="form-section">
+
+    <!-- <div class="page-header"> -->
+
+        <h2>Prescription Medicines</h2>
+
+<div id="medicineContainer">
+
+    <div class="medicine-card">
+        <div class="page-header">
+
+            <h3>Medicine 1</h3>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Medicine</label>
+
+                <select>
+
+                    <option>Select Medicine</option>
+
+                    <option>Paracetamol 650</option>
+
+                    <option>Cetirizine</option>
+
+                    <option>Azithromycin</option>
+
+                    <option>Vitamin C</option>
+
+                    <option>ORS Powder</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Available Stock</label>
+
+                <input
+                    type="text"
+                    value="250"
+                    readonly>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Dosage</label>
+
+                <select>
+
+                    <option>½ Tablet</option>
+
+                    <option selected>1 Tablet</option>
+
+                    <option>2 Tablets</option>
+
+                    <option>5 ml</option>
+
+                    <option>10 ml</option>
+
+                    <option>1 Capsule</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Frequency</label>
+
+                <select>
+
+                    <option>1-0-0</option>
+
+                    <option>0-1-0</option>
+
+                    <option>0-0-1</option>
+
+                    <option selected>1-1-1</option>
+
+                    <option>1-0-1</option>
+
+                    <option>SOS</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Quantity</label>
+
+                <input
+                    type="number"
+                    placeholder="10">
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Duration</label>
+
+                <div class="duration-group">
+
+                    <input
+                        type="number"
+                        placeholder="5">
+
+                    <select>
+
+                        <option selected>Days</option>
+
+                        <option>Weeks</option>
+
+                        <option>Months</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Food Timing</label>
+
+                <select>
+
+                    <option>Before Food</option>
+
+                    <option selected>After Food</option>
+
+                    <option>Empty Stomach</option>
+
+                    <option>With Food</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Route</label>
+
+                <select>
+
+                    <option selected>Oral</option>
+
+                    <option>Injection</option>
+
+                    <option>IV</option>
+
+                    <option>IM</option>
+
+                    <option>Drops</option>
+
+                    <option>Ointment</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Instructions</label>
+
+                <textarea
+                    rows="3"
+                    placeholder="Additional medicine instructions..."></textarea>
+
+            </div>
+
+        </div>
+        <div class="form-actions">
+
+     <button
+                type="button"
+                class="danger-btn"
+                onclick="removeMedicine(this)">
+
+                Remove
+
+            </button>
+
+        <button
+            type="button"
+            class="primary-btn"
+            onclick="addMedicine(this)">
+
+            <i class="fa-solid fa-plus"></i>
+            Add Medicine
+
+        </button>
+
+    </div>
+
+
+</div>
+    </div>
+
+   
+
+</section>
+<!-- ================= Investigations ================= -->
+
+<section class="form-section">
+
+    <h2>Investigations (Optional)</h2>
+
+    <div class="form-row">
+
+        <div class="form-group">
+
+            <label>Select Required Tests</label>
+
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px;">
+
+                <label><input type="checkbox"> CBC</label>
+
+                <label><input type="checkbox"> Blood Sugar</label>
+
+                <label><input type="checkbox"> Urine Test</label>
+
+                <label><input type="checkbox"> ECG</label>
+
+                <label><input type="checkbox"> X-Ray</label>
+
+                <label><input type="checkbox"> CT Scan</label>
+
+                <label><input type="checkbox"> MRI</label>
+
+                <label><input type="checkbox"> Lipid Profile</label>
+
+                <label><input type="checkbox"> Liver Function Test</label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= Advice ================= -->
+
+<section class="form-section">
+
+    <h2>Patient Advice</h2>
+
+    <div class="form-row">
+
+        <div class="form-group">
+
+            <label>Advice</label>
+
+            <textarea rows="5"
+placeholder="Example:
+
+• Drink plenty of water
+
+• Complete full course of medicines
+
+• Take proper rest
+
+• Avoid oily and spicy food
+
+• Return immediately if symptoms worsen"></textarea>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= Follow Up ================= -->
+
+<section class="form-section">
+
+    <h2>Follow Up</h2>
+
+    <div class="form-row">
+
+        <div class="form-group">
+
+            <label>Review After</label>
+
+            <div class="duration-group">
+
+                <input
+                    type="number"
+                    placeholder="7">
+
+                <select>
+
+                    <option selected>Days</option>
+
+                    <option>Weeks</option>
+
+                    <option>Months</option>
+
+                    <option>Years</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>OR Next Visit Date</label>
+
+            <input type="date">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= Buttons ================= -->
+
+<section class="form-actions">
+
+   <button type="button"
+        class="secondary-btn"
+        onclick="saveDraft()">
+    Save Draft
+</button>
+
+    <button type="button"
+        class="primary-btn"
+        onclick="if(validatePrescription()) savePrescription();">
+    Save Prescription
+</button>
+
+    <button type="button"
+        class="primary-btn"
+        onclick="printPrescription()">
+    Print Prescription
+</button>
+
+    <button
+        type="reset"
+        class="danger-btn">
+
+        Cancel
+
+    </button>
+
+</section>
+<!-- ==================================================
+                PATIENT HISTORY MODAL
+=================================================== -->
+
+<div id="patientHistoryModal" class="modal">
+
+    <div class="modal-content modal-large">
+
+        <!-- Header -->
+
+        <div class="modal-header">
+
+            <h2>Patient Medical History</h2>
+
+            <button class="secondary-btn"
+        onclick="openPatientHistory()">
+    Patient History
+</button>
+        </div>
+
+        <!-- Patient Details -->
+
+        <section class="form-section">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>UHID</label>
+
+                    <input
+                        type="text"
+                        value="UHID260805001"
+                        readonly>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Patient Name</label>
+
+                    <input
+                        type="text"
+                        value="Rahul Sharma"
+                        readonly>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Age / Gender</label>
+
+                    <input
+                        type="text"
+                        value="35 Years / Male"
+                        readonly>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="form-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search by Date, Diagnosis or Medicine">
+
+                <button class="primary-btn">
+
+                    Search
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- History -->
+
+        <section class="table-section">
+
+            <table class="appointment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date</th>
+
+                        <th>Doctor</th>
+
+                        <th>Diagnosis</th>
+
+                        <th>Medicines</th>
+
+                        <th>Advice</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>04 Aug 2026</td>
+
+                        <td>Dr. Patil</td>
+
+                        <td>Fever</td>
+
+                        <td>Paracetamol + Cetirizine</td>
+
+                        <td>Drink Water</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                View
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>18 Jul 2026</td>
+
+                        <td>Dr. Shah</td>
+
+                        <td>Gastritis</td>
+
+                        <td>Pantoprazole</td>
+
+                        <td>Avoid Spicy Food</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                View
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>01 Jul 2026</td>
+
+                        <td>Dr. Patil</td>
+
+                        <td>Diabetes</td>
+
+                        <td>Metformin</td>
+
+                        <td>Exercise Daily</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+
+                                View
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Footer -->
+
+        <div class="modal-footer">
+
+            <button
+                class="secondary-btn"
+                onclick="closeModal('patientHistoryModal')">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+<script src="{{ url_for('static', filename='js/prescription.js') }}"></script>
+</body>
+</html>

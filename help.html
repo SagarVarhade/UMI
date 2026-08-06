@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<section class="faq-section">
+    <title>Document</title>
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+    <section class="faq-section">
+
+        <div class="page-actions">
+
+<button class="secondary-btn" onclick="history.back()">
+    ← Back
+</button>
+        </div>
+    <h2 ><center>Help / FAQ</Center></h2>
+
+
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>How do I log in to UMI?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Enter your Employee ID and Password. Click Login.
+                If you forget your password, contact the administrator.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>What should I do if the system is slow or shows a network error?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Check your internet/LAN connection, refresh the page,
+                ensure the server is running, and contact the IT administrator
+                if the problem continues.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>How do I search for a patient?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Search using UHID, Mobile Number, or Patient Name.
+                Verify patient details before continuing.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>What should I do if I enter incorrect information?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Edit the record if permitted or contact the administrator.
+                Avoid creating duplicate records.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            <span>How do I get technical support?</span>
+            <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Note the error message, try refreshing the page,
+                and contact the IT administrator if the issue persists.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/faq.js') }}"></script></body>
+</html>

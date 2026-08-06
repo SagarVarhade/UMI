@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMI | Pharmacy Dashboard</title>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+<div class="sidebar-logo">
+
+    <img src="{{ url_for('static', filename='images/logo.png') }}">
+
+    <div>
+
+        <!-- <h2>UMI</h2> -->
+
+        <p>Hospital ERP</p>
+
+    </div>
+
+</div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="#" class="active">Dashboard</a>
+
+            <a href="{{ url_for('medicine_inventory') }}" class="bg">
+                Medicine Inventory
+            </a>
+           <a href="{{ url_for('help_page') }}" class="bg">Help</a>
+
+                        <a href="{{ url_for('logout_page') }}" class="danger-btn">Logout</a>
+
+
+        </nav>
+
+    </aside>
+
+    <div class="main-container">
+
+        <header class="top-navbar">
+
+            <h1>Pharmacy Dashboard</h1>
+
+            <div class="navbar-right">
+
+                <input type="date">
+
+                <div class="profile-info">
+
+                    <!-- <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile"> -->
+
+                    <span>Pharmacist</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="dashboard-content">
+
+            <section class="toolbar">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Search by Mobile, UHID or Patient Name">
+
+                    <button>
+                        Search
+                    </button>
+
+                </div>
+
+            </section>
+
+            <section class="tab-section">
+
+                <button class="tab-btn active">
+                    Pending (6)
+                </button>
+
+                <button class="tab-btn">
+                    Dispensed (14)
+                </button>
+
+            </section>
+
+            <section class="table-section">
+
+                <table class="appointment-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>UHID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Mobile</th>
+                            <th>Doctor</th>
+                            <th>Prescription Time</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Dummy Data (Replace Later) -->
+
+                        <tr>
+
+                            <td>UHID260804001</td>
+                            <td>Rahul Sharma</td>
+                            <td>35</td>
+                            <td>9876543210</td>
+                            <td>Dr. Patil</td>
+                            <td>11:20 AM</td>
+
+                            <td>
+
+                                <a href="{{ url_for('dispense_medicine') }}"
+                                   class="secondary-btn" >
+
+                                    Dispense
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>UHID260804002</td>
+                            <td>Sneha Patil</td>
+                            <td>28</td>
+                            <td>9876543201</td>
+                            <td>Dr. Kulkarni</td>
+                            <td>11:45 AM</td>
+
+                            <td>
+
+                                <a href="{{ url_for('dispense_medicine') }}"
+                                   class="secondary-btn">
+
+                                    Dispense
+
+                                </a>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

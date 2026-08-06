@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMI | Medicine Inventory</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+
+<!-- Page Specific CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+
+<!-- Responsive (Always Last) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}"></head>
+<body>
+
+<div class="page-container">
+
+    <header class="page-header">
+    
+
+        <div class="page-title">
+            <h1>Medicine Inventory</h1>
+            <p>Manage medicine stock and batches.</p>
+
+        </div>
+<div class="page-actions">
+
+<button class="secondary-btn" onclick="history.back()">
+    ← Back
+</button>
+
+        </div>
+    </header>
+
+    <main class="inventory-container">
+
+        <!-- Toolbar -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    placeholder="Search Medicine">
+
+            </div>
+
+            <div class="filter-box">
+
+                <label>Status</label>
+
+                <select>
+
+                    <option>All</option>
+                    <option>In Stock</option>
+                    <option>Low Stock</option>
+                    <option>Out of Stock</option>
+                    <option>Expiring Soon</option>
+                    <option>Expired</option>
+
+                </select>
+
+            </div>
+
+            <div class="toolbar-actions">
+
+                <button class="primary-btn">
+                    + Add Medicine
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Inventory Table -->
+
+        <section class="table-section">
+
+            <table class="inventory-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Medicine Name</th>
+                        <th>Batch No.</th>
+                        <th>Expiry Date</th>
+                        <th>Stock</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- Dummy Data (Replace with Database Later) -->
+
+                    <tr>
+
+                        <td>Paracetamol 650 mg</td>
+                        <td>A001</td>
+                        <td>15-01-2027</td>
+                        <td>125</td>
+                        <td>In Stock</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+                                Edit
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Azithromycin 500 mg</td>
+                        <td>B105</td>
+                        <td>10-11-2026</td>
+                        <td>8</td>
+                        <td>Low Stock</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+                                Edit
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Vitamin C</td>
+                        <td>C210</td>
+                        <td>18-08-2026</td>
+                        <td>0</td>
+                        <td>Out of Stock</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+                                Edit
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Pantoprazole 40 mg</td>
+                        <td>D321</td>
+                        <td>05-09-2026</td>
+                        <td>40</td>
+                        <td>Expiring Soon</td>
+
+                        <td>
+
+                            <button class="secondary-btn">
+                                Edit
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/forms.js') }}"></script>
+<script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+</body>
+</html>

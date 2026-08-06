@@ -1,0 +1,577 @@
+/*==================================================
+                UMI RESPONSIVE CSS
+==================================================*/
+
+
+/*==================================================
+                LARGE DESKTOP
+==================================================*/
+
+@media (max-width:1400px){
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.summary-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*==================================================
+                LAPTOP
+==================================================*/
+
+@media (max-width:1200px){
+
+.page-container{
+
+    padding:25px;
+
+}
+
+.dashboard-content{
+
+    padding:25px;
+
+}
+
+.summary-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+/*==================================================
+                TABLET
+==================================================*/
+
+@media (max-width:992px){
+
+.sidebar{
+
+    width:240px;
+
+}
+
+.main-container{
+
+    margin-left:240px;
+
+}
+
+.page-container{
+
+    padding:20px;
+
+}
+
+.dashboard-content{
+
+    padding:20px;
+
+}
+
+.page-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+}
+
+.page-actions{
+
+    width:100%;
+
+    justify-content:flex-start;
+
+    flex-wrap:wrap;
+
+}
+
+.toolbar{
+
+    flex-wrap:wrap;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+}
+
+.summary-cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.table-section{
+
+    overflow-x:auto;
+
+}
+
+.appointment-table,
+
+.inventory-table,
+
+.summary-table{
+
+    min-width:750px;
+
+}
+
+}
+/*==================================================
+                SMALL TABLET
+==================================================*/
+
+@media (max-width:768px){
+
+.dashboard-container{
+
+    flex-direction:column;
+
+}
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.main-container{
+
+    margin-left:0;
+
+}
+
+.sidebar-menu{
+
+    flex-direction:row;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.sidebar-menu a{
+
+    width:auto;
+
+}
+
+.top-navbar{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    justify-content:center;
+
+    gap:15px;
+
+    height:auto;
+
+    padding:20px;
+
+}
+
+.navbar-right{
+
+    width:100%;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+}
+
+.profile-info{
+
+    width:100%;
+
+    justify-content:flex-end;
+
+}
+
+.form-row{
+
+    flex-direction:column;
+
+}
+
+.form-group{
+
+    width:100%;
+
+}
+
+.toolbar{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+}
+
+.toolbar-actions{
+
+    width:100%;
+
+    justify-content:flex-end;
+
+}
+
+.filter-box,
+
+.date-filter{
+
+    width:100%;
+
+}
+
+.summary-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.action-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.form-actions{
+
+    justify-content:flex-end;
+
+}
+
+.summary-table{
+
+    max-width:100%;
+
+}
+
+.search-input{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.search-input input{
+
+    border-radius:12px;
+
+}
+
+.search-input .search-btn{
+
+    width:100%;
+
+    border-radius:12px;
+
+}
+
+.table-section{
+
+    overflow-x:auto;
+
+}
+
+.appointment-table,
+
+.inventory-table,
+
+.summary-table{
+
+    min-width:700px;
+
+}
+
+}
+
+
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media (max-width:576px){
+
+body{
+
+    font-size:14px;
+
+}
+
+.login-page{
+
+    padding:20px;
+
+}
+
+.login-container{
+
+    max-width:100%;
+
+}
+
+.login-card{
+
+    padding:24px;
+
+}
+
+.logo-section h1{
+
+    font-size:28px;
+
+}
+
+.logo-section p{
+
+    font-size:14px;
+
+}
+
+.login-header h2{
+
+    font-size:24px;
+
+}
+
+.top-navbar h1{
+
+    font-size:22px;
+
+}
+
+.page-title h1{
+
+    font-size:24px;
+
+}
+
+.page-title p{
+
+    font-size:14px;
+
+}
+
+.summary-card{
+
+    padding:22px;
+
+}
+
+.dashboard-card{
+
+    padding:22px;
+
+}
+
+.action-card{
+
+    padding:22px;
+
+}
+
+.form-section{
+
+    padding:20px;
+
+}
+
+.table-section{
+
+    padding:20px;
+
+}
+
+.primary-btn,
+
+.secondary-btn,
+
+.danger-btn,
+
+.table-btn{
+
+    min-width:140px;
+
+}
+
+.modal-content{
+
+    width:100%;
+
+}
+
+.modal-header,
+
+.modal-body,
+
+.modal-footer{
+
+    padding:18px;
+
+}
+
+.modal-footer{
+
+    flex-direction:column;
+
+}
+
+.modal-footer .primary-btn,
+
+.modal-footer .secondary-btn,
+
+.modal-footer .danger-btn{
+
+    width:100%;
+
+}
+
+}
+
+
+/*==================================================
+                SMALL MOBILE
+==================================================*/
+
+@media (max-width:400px){
+
+.sidebar-header{
+
+    padding:20px;
+
+}
+
+.sidebar-header h2{
+
+    font-size:22px;
+
+}
+
+.top-navbar{
+
+    padding:15px;
+
+}
+
+.dashboard-content,
+
+.page-container{
+
+    padding:15px;
+
+}
+
+.login-card{
+
+    padding:20px 16px;
+
+}
+
+.logo-section h1{
+
+    font-size:24px;
+
+}
+
+.login-header h2{
+
+    font-size:22px;
+
+}
+
+.summary-card h1{
+
+    font-size:26px;
+
+}
+
+.page-title h1{
+
+    font-size:22px;
+
+}
+
+.profile-info{
+
+    padding:6px 10px;
+
+}
+
+.profile-info span{
+
+    font-size:13px;
+
+}
+
+}
