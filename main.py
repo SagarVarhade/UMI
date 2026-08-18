@@ -327,7 +327,7 @@ def import_csv():
 
 @app.route("/", methods=["GET", "POST"])
 def web():
-    return render_template("auth/login.html")
+    return render_template("auth/index.html")
 
 
 @app.route("/index", methods=["GET", "POST"])
@@ -345,9 +345,9 @@ def index():
         elif username == "Admin" and password == "1234":
             return redirect(url_for("admin_dashboard"))
         else:
-            return render_template("auth/login.html", error="Invalid Employee ID or Password")
+            return render_template("auth/index.html", error="Invalid Employee ID or Password")
 
-    return render_template("auth/login.html")
+    return render_template("auth/index.html")
 
 
 @app.route("/nurse")
